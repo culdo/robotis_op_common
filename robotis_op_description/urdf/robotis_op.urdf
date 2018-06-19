@@ -71,13 +71,6 @@
   <gazebo reference="MP_HEAD">
     <selfCollide>1</selfCollide>
   </gazebo>
-  <gazebo reference="MP_SHOULDER_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_SHOULDER_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-    
   <gazebo reference="MP_THIGH1_L">
     <selfCollide>1</selfCollide>
   </gazebo>
@@ -889,7 +882,7 @@
   <link name="MP_ANKLE2_L">
     <inertial>
       <origin xyz="-0.025995 -0.009506 -0.000503"/>
-      <mass value="0.1004462"/>
+      <mass value="0.0794462"/>
       <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
     </inertial>
     <collision>
@@ -1009,7 +1002,7 @@
   <link name="MP_ANKLE2_R">
     <inertial>
       <origin xyz="0.025995 -0.009506 -0.000503"/>
-      <mass value="0.1004462"/>
+      <mass value="0.0794462"/>
       <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
     </inertial>
     <collision>
