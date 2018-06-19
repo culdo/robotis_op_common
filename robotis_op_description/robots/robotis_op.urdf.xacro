@@ -4,8 +4,6 @@
 
   <xacro:include filename="$(find robotis_op_description)/robots/robotis_op.urdf.xacro.xml" />
 
-  <xacro:include filename="$(find robotis_op_description)/urdf/robotis_op.gazebo.xacro" />
-
 
   <robotis_op_macro />      
 </robot>
