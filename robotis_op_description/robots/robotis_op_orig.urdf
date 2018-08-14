@@ -50,7 +50,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/body.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/body.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -106,7 +106,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/shoulder_l.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/shoulder_l.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -126,7 +126,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/arm_high_l.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/arm_high_l.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -257,7 +257,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/shoulder_r.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/shoulder_r.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -277,7 +277,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/arm_high_r.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/arm_high_r.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -611,7 +611,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/neck.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/neck.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -631,7 +631,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/head.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/head.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -733,7 +733,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/pelvis_l.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/pelvis_l.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -753,7 +753,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/thigh1_l.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/thigh1_l.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -773,7 +773,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/thigh2_l.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/thigh2_l.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -793,7 +793,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/tibia_l.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/tibia_l.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -813,7 +813,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/ankle1_l.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/ankle1_l.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -833,7 +833,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/ankle2_l.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/ankle2_l.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -853,7 +853,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/pelvis_r.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/pelvis_r.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -873,7 +873,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/thigh1_r.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/thigh1_r.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -893,7 +893,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/thigh2_r.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/thigh2_r.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -913,7 +913,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/tibia_r.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/tibia_r.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -933,7 +933,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/ankle1_r.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/ankle1_r.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -953,7 +953,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robotis_op_description/meshes/ankle2_r.STL" scale="1 1 1"/>
+        <mesh filename="file://robotis_op_description/meshes/ankle2_r.STL" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
