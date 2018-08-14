@@ -4,97 +4,12 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="robotis_op2" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <material name="black">
-    <color rgba="0.0 0.0 0.0 1.0"/>
-  </material>
-  <material name="blue">
-    <color rgba="0.0 0.0 0.8 1.0"/>
-  </material>
-  <material name="green">
-    <color rgba="0.0 0.8 0.0 1.0"/>
-  </material>
-  <material name="grey">
-    <color rgba="0.60 0.60 0.60 1.0"/>
-  </material>
-  <material name="orange">
-    <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
-  </material>
-  <material name="brown">
-    <color rgba="0.870588235294 0.811764705882 0.764705882353 1.0"/>
-  </material>
-  <material name="red">
-    <color rgba="0.8 0.0 0.0 1.0"/>
-  </material>
-  <material name="white">
-    <color rgba="1.0 1.0 1.0 1.0"/>
-  </material>
-  <material name="beige">
-    <color rgba="0.98 0.915 0.72 1.0"/>
-  </material>
-  <material name="temp">
-    <color rgba="0.5 0.5 0.8 1.0"/>
-  </material>
-  <!-- body link -->
-  <gazebo reference="base_link">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_SHOULDER_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ARM_HIGH_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ARM_LOW_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ARM_GRIPPER_FIX_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ARM_GRIPPER_MOV_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ARM_HIGH_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ARM_LOW_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ARM_GRIPPER_FIX_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ARM_GRIPPER_MOV_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_NECK">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_HEAD">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_THIGH1_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_TIBIA_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ANKLE1_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ANKLE2_L">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_THIGH1_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_TIBIA_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ANKLE1_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
-  <gazebo reference="MP_ANKLE2_R">
-    <selfCollide>1</selfCollide>
-  </gazebo>
+  <!-- unit conversions -->
+  <!-- inventor sometimes gives ridiculous units -->
+  <!-- such conversion factors make description easier to read -->
+  <!-- unit conversions -->
+  <!-- inventor sometimes gives ridiculous units -->
+  <!-- such conversion factors make description easier to read -->
   <link name="base_link"/>
   <link name="MP_BODY">
     <inertial>
@@ -136,7 +51,7 @@
     <inertial>
       <origin xyz="-0.0031158909 0.020443695 -0.019663084"/>
       <mass value="0.01"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="1.66666666667e-07" ixy="0.0" ixz="0.0" iyy="1.66666666667e-07" iyz="0.0" izz="1.66666666667e-07"/>
     </inertial>
     <collision>
       <origin xyz="-0.0031158909 0.020443695 -0.019663084"/>
@@ -149,14 +64,14 @@
       <geometry>
         <box scale="1 1 1" size="0.001 0.001 0.001"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_SHOULDER_L">
     <inertial>
-      <origin xyz="-0.013522619 0.010264050 0.0013935747"/>
+      <origin xyz="-0.013522619 -0.010264050 0.0013935747"/>
       <mass value="0.025913024"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="3.36377504399e-06" ixy="0.0" ixz="0.0" iyy="1.56497929465e-06" iyz="0.0" izz="2.90441810667e-06"/>
     </inertial>
     <collision>
       <origin xyz="-0.013522619 -0.010264050 0.0013935747"/>
@@ -169,14 +84,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/shoulder_l.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_HIGH_L">
     <inertial>
       <origin xyz="-0.036239 0.000734 0.000660"/>
       <mass value="0.16837715"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="3.15566841958e-05" ixy="0.0" ixz="0.0" iyy="6.77016457292e-05" iyz="0.0" izz="6.48813284667e-05"/>
     </inertial>
     <collision>
       <origin xyz="-0.036239 0.000734 0.000660"/>
@@ -189,14 +104,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/arm_high_l.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_LOW_L">
     <inertial>
-      <origin xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.059288504"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <origin rpy="0 0 0" xyz="0.0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="8.74166666667e-07" ixy="0.0" ixz="0.0" iyy="1.70666666667e-06" iyz="0.0" izz="8.74166666667e-07"/>
     </inertial>
     <collision>
       <origin rpy="0 0 0" xyz="0.016 0.016 0"/>
@@ -209,14 +124,14 @@
       <geometry>
         <box size="0.032 0.032 0.035"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_GRIPPER_FIX_L">
     <inertial>
       <origin xyz="0.045838 -0.013490 0.006666"/>
-      <mass value="0.010"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <mass value="0.01"/>
+      <inertia ixx="8.74166666667e-07" ixy="0.0" ixz="0.0" iyy="1.70666666667e-06" iyz="0.0" izz="8.74166666667e-07"/>
     </inertial>
     <collision>
       <origin rpy="0 0 0" xyz="0.016 0 0"/>
@@ -229,14 +144,14 @@
       <geometry>
         <box size="0.064 0.032 0.032"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_GRIPPER_FIX_DUMMY_L">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.010"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <origin rpy="0 0 0" xyz="0.0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="8.74166666667e-07" ixy="0.0" ixz="0.0" iyy="1.70666666667e-06" iyz="0.0" izz="8.74166666667e-07"/>
     </inertial>
     <collision>
       <geometry>
@@ -248,14 +163,14 @@
       <geometry>
         <box size="0.032 0.005 0.032"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_GRIPPER_MOV_L">
     <inertial>
-      <origin xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.010"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <origin rpy="0 0 0" xyz="0.0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="8.74166666667e-07" ixy="0.0" ixz="0.0" iyy="1.70666666667e-06" iyz="0.0" izz="8.74166666667e-07"/>
     </inertial>
     <collision name="COL_MP_ARM_GRIPPER_MOV_L">
       <origin rpy="0 0 0" xyz="0.016 0 0"/>
@@ -274,21 +189,21 @@
       <geometry>
         <box size="0.032 0.005 0.032"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
     <visual name="VIS_MP_ARM_GRIPPER_MOV_EXT_L">
       <origin rpy="0 0 0" xyz="0.031 -0.0025 0"/>
       <geometry>
         <box size="0.002 0.01 0.032"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_BACK_R">
     <inertial>
-      <origin xyz="0 0 0"/>
+      <origin xyz="0.0 0.0 -0.0"/>
       <mass value="0.01"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="1.66666666667e-07" ixy="0.0" ixz="0.0" iyy="1.66666666667e-07" iyz="0.0" izz="1.66666666667e-07"/>
     </inertial>
     <collision>
       <geometry>
@@ -300,14 +215,14 @@
       <geometry>
         <box size="0.001 0.001 0.001"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_SHOULDER_R">
     <inertial>
       <origin xyz="-0.013523 0.010264 0.001394"/>
       <mass value="0.025913024"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="3.36377504399e-06" ixy="0.0" ixz="0.0" iyy="1.56497929465e-06" iyz="0.0" izz="2.90441810667e-06"/>
     </inertial>
     <collision>
       <origin xyz="-0.013523 0.010264 0.001394"/>
@@ -320,14 +235,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/shoulder_r.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_HIGH_R">
     <inertial>
       <origin xyz="-0.036239 0.000734 -0.000660"/>
       <mass value="0.16837715"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="3.15566841958e-05" ixy="0.0" ixz="0.0" iyy="6.77016457292e-05" iyz="0.0" izz="6.48813284667e-05"/>
     </inertial>
     <collision>
       <origin xyz="-0.036239 0.000734 -0.000660"/>
@@ -340,14 +255,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/arm_high_r.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_LOW_R">
     <inertial>
       <origin xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.059288504"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="1.11116537913e-05" ixy="0.0" ixz="0.0" iyy="1.11116537913e-05" iyz="0.0" izz="1.01185713493e-05"/>
     </inertial>
     <collision>
       <origin rpy="0 0 0" xyz="0.016 -0.016 0"/>
@@ -360,14 +275,14 @@
       <geometry>
         <box size="0.032 0.032 0.035"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_GRIPPER_FIX_R">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.010"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <origin rpy="0 0 0" xyz="0.0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="8.74166666667e-07" ixy="0.0" ixz="0.0" iyy="1.70666666667e-06" iyz="0.0" izz="8.74166666667e-07"/>
     </inertial>
     <collision>
       <origin rpy="0 0 0" xyz="0.016 0 0"/>
@@ -380,14 +295,14 @@
       <geometry>
         <box size="0.064 0.032 0.032"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_GRIPPER_FIX_DUMMY_R">
     <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="0.010"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <origin xyz="0.0 0.0 0.0"/>
+      <mass value="0.01"/>
+      <inertia ixx="8.74166666667e-07" ixy="0.0" ixz="0.0" iyy="1.70666666667e-06" iyz="0.0" izz="8.74166666667e-07"/>
     </inertial>
     <collision>
       <geometry>
@@ -399,14 +314,14 @@
       <geometry>
         <box size="0.032 0.005 0.032"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ARM_GRIPPER_MOV_R">
     <inertial>
-      <origin xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.010"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <origin rpy="0 0 0" xyz="0.016 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="8.53333333333e-07" ixy="0.0" ixz="0.0" iyy="1.70666666667e-06" iyz="0.0" izz="8.53333333333e-07"/>
     </inertial>
     <collision name="COL_MP_ARM_GRIPPER_MOV_R">
       <origin rpy="0 0 0" xyz="0.016 0 0"/>
@@ -425,14 +340,14 @@
       <geometry>
         <box size="0.032 0.005 0.032"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
     <visual name="VIS_MP_ARM_GRIPPER_MOV_EXT_R">
       <origin rpy="0 0 0" xyz="0.031 -0.0025 0"/>
       <geometry>
         <box size="0.002 0.01 0.032"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <joint name="j_back_l" type="fixed">
@@ -661,7 +576,7 @@
     <inertial>
       <origin xyz="0.001424 -0.016567 -0.007128"/>
       <mass value="0.024357719"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="3.12641472415e-06" ixy="0.0" ixz="0.0" iyy="6.25435180573e-06" iyz="0.0" izz="5.09279308092e-06"/>
     </inertial>
     <collision>
       <origin xyz="0.0 -0.0 0.01525"/>
@@ -681,7 +596,7 @@
     <inertial>
       <origin xyz="0.000064 -0.018565 -0.007667"/>
       <mass value="0.15804192"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="0.000122387662848" ixy="0.0" ixz="0.0" iyy="0.000122387662848" iyz="0.0" izz="0.000122387662848"/>
     </inertial>
     <collision>
       <origin xyz="0.000064 -0.018565 -0.0"/>
@@ -782,8 +697,8 @@
   <link name="MP_PELVIS_L">
     <inertial>
       <origin xyz="0.000000 0.000480 0.018437"/>
-      <mass value="0.167"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <mass value="0.197"/>
+      <inertia ixx="5.00544166667e-05" ixy="0.0" ixz="0.0" iyy="2.70710833333e-05" iyz="0.0" izz="4.35041666667e-05"/>
     </inertial>
     <collision>
       <origin xyz="0.000000 -0.010580 0.028437"/>
@@ -796,14 +711,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/pelvis_l.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_THIGH1_L">
     <inertial>
       <origin xyz="0.000079 0.018242 0.013873"/>
       <mass value="0.11904336"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="8.63864182575e-05" ixy="0.0" ixz="0.0" iyy="7.44417771916e-05" iyz="0.0" izz="2.82324929341e-05"/>
     </inertial>
     <collision>
       <origin xyz="0.000079 0.018242 0.013873"/>
@@ -816,14 +731,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/thigh1_l.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_THIGH2_L">
     <inertial>
       <origin xyz="-0.062965 -0.000323 0.000692"/>
-      <mass value="0.11904336"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <mass value="0.0070309794"/>
+      <inertia ixx="1.9042235875e-06" ixy="0.0" ixz="0.0" iyy="6.2540561763e-06" iyz="0.0" izz="5.7853242163e-06"/>
     </inertial>
     <collision>
       <origin xyz="-0.062965 -0.000323 0.000692"/>
@@ -836,14 +751,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/thigh2_l.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_TIBIA_L">
     <inertial>
       <origin xyz="-0.053955 0.006548 -0.000592"/>
-      <mass value="0.070309794"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <mass value="0.0070309794"/>
+      <inertia ixx="1.9042235875e-06" ixy="0.0" ixz="0.0" iyy="6.2540561763e-06" iyz="0.0" izz="5.7853242163e-06"/>
     </inertial>
     <collision>
       <origin xyz="-0.053955 0.006548 -0.000592"/>
@@ -856,14 +771,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/tibia_l.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ANKLE1_L">
     <inertial>
       <origin xyz="-0.000214 -0.018536 0.013873"/>
       <mass value="0.16710792"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="8.87491015337e-05" ixy="0.0" ixz="0.0" iyy="3.78635506981e-05" iyz="0.0" izz="9.24947852318e-05"/>
     </inertial>
     <collision>
       <origin xyz="-0.000214 -0.018536 0.013873"/>
@@ -876,14 +791,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/ankle1_l.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ANKLE2_L">
     <inertial>
       <origin xyz="-0.025995 -0.009506 -0.000503"/>
       <mass value="0.0794462"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="0.000100446478867" ixy="0.0" ixz="0.0" iyy="7.20312213333e-05" iyz="0.0" izz="2.92626836667e-05"/>
     </inertial>
     <collision>
       <origin xyz="-0.025995 -0.009506 -0.000503"/>
@@ -896,14 +811,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/ankle2_l.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_PELVIS_R">
     <inertial>
       <origin xyz="0.000000 0.000480 0.018437"/>
       <mass value="0.197"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="5.00544166667e-05" ixy="0.0" ixz="0.0" iyy="2.70710833333e-05" iyz="0.0" izz="4.35041666667e-05"/>
     </inertial>
     <collision>
       <origin xyz="0.000000 0.010580 0.028437"/>
@@ -916,14 +831,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/pelvis_r.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_THIGH1_R">
     <inertial>
-      <origin xyz="0.000079 -0.018242 0.0138735"/>
+      <origin xyz="0.000079 -0.018242 0.013873"/>
       <mass value="0.11904336"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="8.63864182575e-05" ixy="0.0" ixz="0.0" iyy="7.44417771916e-05" iyz="0.0" izz="2.82324929341e-05"/>
     </inertial>
     <collision>
       <origin xyz="0.000079 -0.018242 0.0138735"/>
@@ -936,14 +851,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/thigh1_r.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_THIGH2_R">
     <inertial>
       <origin xyz="0.062965 -0.000323 0.000692"/>
       <mass value="0.11904336"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="3.224091e-05" ixy="0.0" ixz="0.0" iyy="0.00010588906872" iyz="0.0" izz="9.795284472e-05"/>
     </inertial>
     <collision>
       <origin xyz="0.062965 -0.000323 0.000692"/>
@@ -956,14 +871,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/thigh2_r.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_TIBIA_R">
     <inertial>
       <origin xyz="0.053955 0.006548 -0.000592"/>
       <mass value="0.070309794"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="1.9042235875e-05" ixy="0.0" ixz="0.0" iyy="6.2540561763e-05" iyz="0.0" izz="5.7853242163e-05"/>
     </inertial>
     <collision>
       <origin xyz="0.053955 0.006548 -0.000592"/>
@@ -976,14 +891,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/tibia_r.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ANKLE1_R">
     <inertial>
       <origin xyz="-0.000214 -0.018536 -0.013873"/>
       <mass value="0.16710792"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="8.87491015337e-05" ixy="0.0" ixz="0.0" iyy="3.78635506981e-05" iyz="0.0" izz="9.24947852318e-05"/>
     </inertial>
     <collision>
       <origin xyz="-0.000214 -0.018536 0.013873"/>
@@ -996,14 +911,14 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/ankle1_r.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <link name="MP_ANKLE2_R">
     <inertial>
       <origin xyz="0.025995 -0.009506 -0.000503"/>
       <mass value="0.0794462"/>
-      <inertia ixx="1.66666666667e-02" ixy="0.0" ixz="0.0" iyy="1.66666666667e-02" iyz="0.0" izz="1.66666666667e-02"/>
+      <inertia ixx="0.000100446478867" ixy="0.0" ixz="0.0" iyy="7.20312213333e-05" iyz="0.0" izz="2.92626836667e-05"/>
     </inertial>
     <collision>
       <origin xyz="0.025995 -0.009506 -0.000503"/>
@@ -1016,7 +931,7 @@
       <geometry>
         <mesh filename="package://robotis_op_description/meshes/ankle2_r.STL" scale="1 1 1"/>
       </geometry>
-      <material name="grey"/>
+      <xacro:grey/>
     </visual>
   </link>
   <joint name="j_pelvis_l" type="revolute">
@@ -1265,8 +1180,8 @@
     <mu2>9000</mu2>
     <kp>1000000.0</kp>
     <kd>10.0</kd>
-    <minDepth>0.000001</minDepth>
-    <maxContacts>100</maxContacts>
+    <minDepth>0.001</minDepth>
+    <maxContacts>1</maxContacts>
   </gazebo>
   <gazebo reference="MP_ANKLE2_R">
     <material>Gazebo/White</material>
@@ -1274,8 +1189,8 @@
     <mu2>9000</mu2>
     <kp>1000000.0</kp>
     <kd>10.0</kd>
-    <minDepth>0.000001</minDepth>
-    <maxContacts>100</maxContacts>
+    <minDepth>0.001</minDepth>
+    <maxContacts>1</maxContacts>
   </gazebo>
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
@@ -1283,4 +1198,3 @@
     </plugin>
   </gazebo>
 </robot>
-
